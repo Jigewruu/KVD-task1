@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    
+    <!-- Bootstrap CSS (Local) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #145cd4;">
+
+    <!-- Your content goes here -->
+
+    <!-- Bootstrap JavaScript (Local) -->
+    <script>
+        function validatePhoneNumber(input) {
+            // Replace any character that is not a number or dash with an empty string
+            input.value = input.value.replace(/[^0-9-]/g, '');
+        }
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        .full-width-button {
+            width: 100%;              /* Makes the button take full width */
+            border-radius: 42px;      /* Adjust the radius for rounded corners */
+            padding: 10px 0;          /* Optional: Adds vertical padding */
+            background-color: #f8e105; /* Optional: Button background color */
+            color: #000000;             /* Optional: Text color */
+            font-size: 16px;          /* Optional: Adjust font size */
+            border: none;             /* Optional: Removes border */
+            cursor: pointer;          /* Adds a pointer cursor on hover */
+            min-height:70px;
+        }
+
+        .full-width-button:hover {
+            background-color: hsl(75, 100%, 35%); /* Optional: Darker shade on hover */
+        }
+        .white-box {
+            width: 100%;              /* Makes the button take full width */
+            border-radius: 42px;      /* Adjust the radius for rounded corners */
+            padding: 10px 0;          /* Optional: Adds vertical padding */
+            background-color: #fff; /* Optional: Button background color */
+            color: #000000;             /* Optional: Text color */
+            font-size: 16px;          /* Optional: Adjust font size */
+            border: none;             /* Optional: Removes border */
+            cursor: pointer;          /* Adds a pointer cursor on hover */
+            height:264px;
+        }
+        .full-width-container {
+            width: 100%;              /* Makes the button take full width */
+            border-radius: 42px;      /* Adjust the radius for rounded corners */
+            padding: 10px 0;          /* Optional: Adds vertical padding */
+            background-color: #f8e105; /* Optional: Button background color */
+            color: #000000;             /* Optional: Text color */
+            font-size: 16px;          /* Optional: Adjust font size */
+            border: none;             /* Optional: Removes border */
+            cursor: pointer;          /* Adds a pointer cursor on hover */
+            height:70px;
+        }
+        .counter {
+            margin-top: 15px;
+            font-weight: bolder;
+            width: 100%;              /* Makes the button take full width */
+            border-radius: 15px;      /* Adjust the radius for rounded corners */
+            padding: 10px 0;          /* Optional: Adds vertical padding */
+            background-color: #001871; /* Optional: Button background color */
+            color: #f8e105;             /* Optional: Text color */
+            font-size: 25px;          /* Optional: Adjust font size */
+            border: none;             /* Optional: Removes border */
+            cursor: pointer;          /* Adds a pointer cursor on hover */
+            height:60px;
+        }
+    </style>
+
+
+    <!-- Screen 1  -->
+    <div id="screen1" style="display: block;">
+        <div class="row">
+            <div style="margin-top: 80px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8" style="text-align: center; color: white; font-size: 18px;">
+                <b>Sila pilih perkhidmatan
+                </b>
+                <br>
+                Please select a service
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8">
+                <button class="full-width-button" onclick="toggleScreen1to2()">
+                    <b>Pascabayar</b>
+                    <br>
+                    Postpaid
+                </button>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8">
+                <button class="full-width-button" onclick="toggleScreen1to2()">
+                    <b>Peranti Rumah</b>
+                    <br>
+                    Home Fibre
+                </button>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8">
+                <button class="full-width-button" onclick="toggleScreen1to2()">
+                    <b>Tawaran Korporat</b>
+                    <br>
+                    Corporate Deals
+                </button>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8">
+                <button class="full-width-button" onclick="toggleScreen1to2()">
+                    <b>Perkhidmatan lain-lain</b>
+                    <br>
+                    Other services
+                </button>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+    </div>
+    
+    <!-- Screen 2  -->
+    <div id="screen2" style="display: none;">
+        <div class="row">
+            <div style="margin-top: 80px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8" style="text-align: center; color: white; font-size: 18px;">
+                <b>Sila masukkan nombor telefon anda untuk
+                    menerima notis tiket melalui SMS</b>
+                <br>
+                Please enter your mobile number to receive
+                ticket notifcation via SMS
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8" style="text-align: center; color: #f8e105; font-size: 18px;">
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">
+                    <b>
+                        Kod panggilan negara
+                        <br>
+                        Country code
+                    </b>
+                  </label>
+                  <select class="form-control dropdown" id="ddlCountry">
+                    <option value="0">--Please Select--</option>
+                    <option value="1">Malaysia</option>
+                    <option value="2">Singapore</option>
+                    <option value="3">Thailand</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8" style="text-align: center; color: #f8e105; font-size: 18px;">
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">
+                    <b>
+                        Nombor telefon
+                        <br>
+                        Moble Number
+                    </b>
+                  </label>
+                  <input id="phoneNumber" class="form-control" pattern="[0-9\-]*" inputmode="numeric" 
+                  title="Only numbers and dashes are allowed" placeholder="e.g.  012-345-6789"
+                  oninput="validatePhoneNumber(this)">
+                </div>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 20px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8">
+                <button class="full-width-button" onclick="validateInputs()">
+                    <b>Dapatkan Tiket</b>
+                    <br>
+                    Get a Ticket
+                </button>
+            </div>
+            <div class="col-2 col-md-2"></div>
+        </div>
+        <div class="row">
+            <div style="margin-top: 80px;"></div>
+        </div>
+    </div>
+    
+    <!-- Screen 3  -->
+    <div id="screen3" style="display: none;">
+        <div class="row">
+            <div class="col-2 col-md-4"></div>
+            <div class="col-8 col-md-4">
+                <div class="white-box">
+                    <div class="row">
+                        <div class="col-2 col-md-1"></div>
+                        <div class="col-8 col-md-10">
+                            <P style="color: #001871; text-align: center; font-size: 16px;">
+                                <B>Nombor giliran anda</B>
+                                <br>
+                                Your Ticket Number
+                            </P>
+                        </div>
+                        <div class="col-2 col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 col-md-1"></div>
+                        <div class="col-8 col-md-10">
+                            <div style="color: #0064dc; font-weight: 500; font-size: 35px; text-align: center;" class="full-width-container">
+                                <b>
+                                    1257
+                                </b>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 col-md-1"></div>
+                        <div class="col-8 col-md-10">
+                            <P style="color: #001871; text-align: center; font-size: 16px;">
+                                <br>
+                                <B>Masa tiket dikeluarkan</B>
+                                <br>
+                                Time of ticket issued
+                            </P>
+                        </div>
+                        <div class="col-2 col-md-1"></div>
+                    </div>
+                    <div style="color: #0064dc; font-weight: 500; font-size: 35px; text-align: center; height: 50px;" class="full-width-container">
+                        <P style="color: #001871; text-align: center; font-size: 16px;">
+                            <B>14/5/2024 | 10:45 AM</B>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 col-md-2"></div>
+                        <div class="col-8 col-md-8" style="text-align: center; color: white; font-size: 18px;">
+                            <br>
+                            <br>
+                            <b>Jumlah pelanggan di hadapan</b>
+                            <br>
+                            Number of customer ahead
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-4">
+                                    <div class="counter">1</div>
+                                </div>
+                                <div class="col-4"></div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-2"></div>
+                    </div>
+                </div>"
+            </div>
+            <div class="col-2 col-md-4"></div>
+        </div>
+    </div>
+        
+    <script>
+        function toggleScreen1to2() {
+            // Get the div elements
+            const screen1 = document.getElementById('screen1');
+            const screen2 = document.getElementById('screen2');
+
+            screen1.style.display = "none"; // Hide screen 1
+            screen2.style.display = "block"; // Show screen 2
+        }
+        function validateInputs() {
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const countrySelect = document.getElementById('ddlCountry').value;
+
+            // Check if the phone number is empty or not a valid format (for simplicity, just checking if it's not empty)
+            if (phoneNumber.trim() === '') {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+
+            // Check if a country is selected from the dropdown
+            if (countrySelect === "0") {
+                alert('Please select a country.');
+                return;
+            }
+
+            // If both inputs are valid, show a success message (you can replace this with your desired action)
+            alert('Inputs are valid! Processing your ticket...');
+            // You could also proceed to submit the form here or perform further actions.
+        }
+    </script>
+</body>
+</html>
